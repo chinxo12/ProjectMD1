@@ -44,7 +44,8 @@
   let speed=1
   let nhacNen = new Audio("sound/snayk.mp3");
   let anCoin = new Audio("sound/tinh.mp3")
-  let die = new Audio("sound/crash.mp3")
+  let die = new Audio("sound/end.mp3")
+  let endSound = new Audio("sound/end.mp3")
 
 
 
@@ -235,6 +236,7 @@
       i++
     }
     if (level===4){
+
       ctx.beginPath()
       ctx.font = "50px Arial";
       ctx.textAlign = "center";
@@ -253,6 +255,8 @@
       ctx.textAlign = "center";
       ctx.fillText(" Số lần chết để bạn vượt qua được trò chơi của tôi là: " + deaths, 600, 350);
       ctx.closePath()
+      endSound.play()
+      tick()
     }
   }
 
