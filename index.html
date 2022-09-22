@@ -45,7 +45,7 @@
     let moveUp = 0
     let moveDown = 0
     let speed = 1
-    let nhacNen = new Audio("sound/snayk.mp3");
+    let nhacNen = new Audio("sound/aoe.mp3");
     let anCoin = new Audio("sound/tinh.mp3")
     let die = new Audio("sound/booom.mp3")
     let endSound = new Audio("sound/end.mp3")
@@ -281,6 +281,7 @@
         }
         // Win Game
         if (level === 4) {
+            nhacNen.pause();
             endSound.play()
 
             ctx.beginPath()
