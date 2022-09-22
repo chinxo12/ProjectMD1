@@ -281,6 +281,7 @@
         }
         // Win Game
         if (level === 4) {
+            endSound.play()
 
             ctx.beginPath()
             ctx.font = "50px Arial";
@@ -300,7 +301,7 @@
             ctx.textAlign = "center";
             ctx.fillText(" Số lần chết để bạn vượt qua được trò chơi của tôi là: " + deaths, 600, 350);
             ctx.closePath()
-            endSound.play()
+
             tick()
         }
     }
